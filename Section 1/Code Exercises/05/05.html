@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch...Case</title>
+</head>
+
+<body>
+
+
+    <p>
+        1) Apple $.99
+        </br>2) Pear $.79
+        </br>3) Orange $1.19
+        </br>4) Grapes $1.492
+        </br>5) Grapefruit $1.79
+        </br>6) Kiwi $.79
+        </br>7) Apricots $1.29
+    </p>
+
+    <div id="output"></div>
+    <!-- First exercise -->
+    <!-- <script src="app.js"></script> -->
+
+</body>
+    <script>
+        let fruit = prompt("Which fruit would you like to purchase (1-7)");
+        let quant = prompt("How many of those fruits you want to purchase?");
+        
+        switch (fruit) {
+            case "1":
+                if(quant > 1){
+                    fruit = "Apples";
+                }else{
+                    fruit = "Apple";
+                }
+                total = quant * .99;
+                break;
+            case "2":
+                if(quant > 1){
+                    fruit = "Pears";
+                }else{
+                    fruit = "Pear";
+                }
+                total = quant * .79;
+                break;
+            case "3":
+            if(quant > 1){
+                    fruit = "Oranges";
+                }else{
+                    fruit = "Orange";
+                }
+                total = quant * 1.19;
+                break;
+            case "4":
+                fruit = "Grapes";
+                total = quant * 1.492;
+                break;
+            case "5":
+            if(quant > 1){
+                    fruit = "Grapefruits";
+                }else{
+                    fruit = "Grapefruit";
+                }
+                total = quant * 1.79;
+                break;
+                case "6":
+                if(quant > 1){
+                    fruit = "Kiwis";
+                }else{
+                    fruit = "Kiwi";   
+                }
+                    total = quant * .79;
+                break;
+                case "7":
+                    fruit = "Apricots";
+                    total = quant * 1.29;
+                break;
+                default:
+                    fruit = "Invalid option";
+                    quant = 0;
+                    break;
+                }
+               
+                document.getElementById("output").innerHTML = (quant + " " + fruit + " $" + total.toFixed(2));
+                console.log(fruit);
+                console.log(quant);
+                
+
+    </script>
+
+</html>
